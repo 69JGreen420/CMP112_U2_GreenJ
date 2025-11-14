@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{FF5E5B83-3A37-E584-F8B3-694444858F29}|">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="b4efce9b-bc40-4f15-bb02-3ded1710cdda" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/playerMovement.cs">
+    <Files>
+      <File FileName="Assets/Scenes/playerMovement.cs" Line="35" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CMP112_U2_GreenJ">
+            <Node name="Assets" expanded="True">
+              <Node name="Scenes" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

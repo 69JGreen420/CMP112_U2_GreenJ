@@ -1,16 +1,75 @@
 using UnityEngine;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
+
+    private bool isGrounded = false;
+    private Rigidbody2D rb;
+    private float direction = 1;
+    public float speed;
+    public float jumpForce;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
+        rb = GetComponent<Rigidbody2D>();
+
+    }
+
+    void Update()
+    {
+
+        if (Keyboard.current.wKey.wasPressedThisFrame && isGrounded)
+        {
+
+            Debug.Log("Jump");
+            Vector2 jump = new Vector2(0, jumpForce);
+            rb.AddForce(jump, ForceMode2D.Impulse);
+
+        }
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+
+        Vector2 movement = new Vector2(direction, 0);
+        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        Debug.Log("Collision");
+        if (collision.gameObject.layer == 8 && !isGrounded)
+        {
+
+            isGrounded = true;
+            Debug.Log("Grounded is true");
+
+        }
+
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+
+        Debug.Log("Collision");
+        if (collision.gameObject.layer == 8 && isGrounded)
+        {
+
+            isGrounded = false;
+            Debug.Log("Grounded is false");
+
+        }
+
+    }
+
 }
