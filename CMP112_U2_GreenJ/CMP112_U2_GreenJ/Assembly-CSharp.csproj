@@ -61,7 +61,10 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.60f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/playerDie.cs" />
     <Compile Include="Assets/Scenes/playerMovement.cs" />
+    <Compile Include="Assets/coinDestroy.cs" />
+    <Compile Include="Assets/Scripts/cameraScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
