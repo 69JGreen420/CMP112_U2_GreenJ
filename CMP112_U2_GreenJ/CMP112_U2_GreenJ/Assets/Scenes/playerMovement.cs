@@ -6,6 +6,7 @@ public class playerMovement : MonoBehaviour
 {
 
     private bool isGrounded = false;
+    private bool jumpRequested = false;
     private Rigidbody2D rb;
     private float direction = 1;
     public float speed;
@@ -22,12 +23,10 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
 
-        if (Keyboard.current.wKey.wasPressedThisFrame && isGrounded)
+        if (Keyboard.current.wKey.isPressed)
         {
 
-            Debug.Log("Jump");
-            Vector2 jump = new Vector2(0, jumpForce);
-            rb.AddForce(jump, ForceMode2D.Impulse);
+            jumpRequested = true;
 
         }
 
@@ -37,8 +36,15 @@ public class playerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        Vector2 movement = new Vector2(direction, 0);
         rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+        if (jumpRequested && isGrounded)
+        {
+
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            jumpRequested = false;
+
+        }
 
 
     }
@@ -48,11 +54,13 @@ public class playerMovement : MonoBehaviour
     {
 
         Debug.Log("Collision");
-        if (collision.gameObject.layer == 8 && !isGrounded)
+        if (collision.gameObject.layer == 8)
         {
 
             isGrounded = true;
             Debug.Log("Grounded is true");
+
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 
         }
 
@@ -62,7 +70,7 @@ public class playerMovement : MonoBehaviour
     {
 
         Debug.Log("Collision");
-        if (collision.gameObject.layer == 8 && isGrounded)
+        if (collision.gameObject.layer == 8)
         {
 
             isGrounded = false;
