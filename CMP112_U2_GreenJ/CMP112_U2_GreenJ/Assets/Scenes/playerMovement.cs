@@ -23,7 +23,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
 
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.wKey.wasPressedThisFrame)
         {
 
             jumpRequested = true;
