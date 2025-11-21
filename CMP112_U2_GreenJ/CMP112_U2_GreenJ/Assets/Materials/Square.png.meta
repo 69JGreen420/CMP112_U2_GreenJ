@@ -126,15 +126,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Square
+      name: Player
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 256
         height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50868094, y: 0.49710637}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -143,6 +143,50 @@ TextureImporter:
       bones: []
       spriteID: 2d009a6b596c7d760800000000000000
       internalID: 7482667652216324306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_0
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 197
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2520be5205c14d23a504f519b14a644
+      internalID: -393603042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Square_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 256
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ce420ecd8d9433ab5387c3acf20178
+      internalID: 208931037
       vertices: []
       indices: 
       edges: []
@@ -165,7 +209,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Square: 7482667652216324306
+      Player: 7482667652216324306
+      Square_0: -393603042
+      Square_1: 208931037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

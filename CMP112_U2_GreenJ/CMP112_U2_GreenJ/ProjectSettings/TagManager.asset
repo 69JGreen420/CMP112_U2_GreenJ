@@ -8,6 +8,8 @@ TagManager:
   - Spike
   - Coin
   - Floor
+  - speedBoost
+  - speedDecrease
   layers:
   - Default
   - TransparentFX

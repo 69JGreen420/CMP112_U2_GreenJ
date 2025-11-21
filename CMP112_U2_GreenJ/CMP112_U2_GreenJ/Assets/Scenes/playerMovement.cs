@@ -9,6 +9,8 @@ public class playerMovement : MonoBehaviour
     private bool jumpRequested = false;
     private Rigidbody2D rb;
     private float direction = 1;
+    public float speedIncrease;
+    public float speedDecrease;
     public float speed;
     public float jumpForce;
 
@@ -61,6 +63,25 @@ public class playerMovement : MonoBehaviour
             Debug.Log("Grounded is true");
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("speedBoost"))
+        {
+
+            speed += speedIncrease;
+
+        }
+
+        if (collision.gameObject.CompareTag("speedDecrease"))
+        {
+
+            speed -= speedDecrease;
 
         }
 
