@@ -2,10 +2,20 @@ using UnityEngine;
 
 public class playerDie : MonoBehaviour
 {
+
+    public GameObject GameManager;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
+        if (GameManager != null)
+        {
+
+            GameManager.SetActive(false);
+
+        }
+
     }
 
     // Update is called once per frame
@@ -40,8 +50,16 @@ public class playerDie : MonoBehaviour
 
     void die() {
 
+        if (GameManager != null)
+        {
+
+            GameManager.SetActive(true);
+
+        }
+
         Destroy(gameObject);
         Debug.Log("Player died!");
+
 
     }
 

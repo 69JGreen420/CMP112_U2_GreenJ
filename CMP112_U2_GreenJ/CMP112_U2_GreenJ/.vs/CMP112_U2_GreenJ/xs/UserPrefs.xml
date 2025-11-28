@@ -1,16 +1,21 @@
 ﻿<Properties StartupConfiguration="{FF5E5B83-3A37-E584-F8B3-694444858F29}|">
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/playerMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/playerDie.cs">
     <Files>
-      <File FileName="Assets/Scenes/playerMovement.cs" Line="26" Column="45" />
+      <File FileName="Assets/Scenes/playerMovement.cs" Line="86" Column="10" />
       <File FileName="Assets/coinDestroy.cs" />
-      <File FileName="Assets/Scripts/cameraScript.cs" />
+      <File FileName="Assets/Scripts/cameraScript.cs" Line="17" Column="86" />
+      <File FileName="Assets/playerDie.cs" Line="35" Column="19" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CMP112_U2_GreenJ">
+          <Node name="CMP112_U2_GreenJ" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scenes" expanded="True" />
               <Node name="Scripts" expanded="True" />
@@ -18,11 +23,12 @@
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a4b060e5-6b0b-4e1a-962c-5967045791e6" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6541e2e3-2c2e-4fca-8fdf-84a5727ebc01" />
 </Properties>

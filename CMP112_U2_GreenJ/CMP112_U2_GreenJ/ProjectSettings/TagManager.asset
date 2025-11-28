@@ -10,6 +10,7 @@ TagManager:
   - Floor
   - speedBoost
   - speedDecrease
+  - UI
   layers:
   - Default
   - TransparentFX
