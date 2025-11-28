@@ -3,18 +3,25 @@ using UnityEngine;
 public class cameraScript : MonoBehaviour
 {
 
-    public Transform Player;
+    public Transform target;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void LateUpdate()
     {
-        
+
+        if (target != null)
+        {
+
+            transform.position = new Vector3(target.position.x + 3, target.position.y, -10);
+
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTarget(GameObject obj)
     {
-            transform.position = new Vector3(Player.position.x + 3, Player.position.y, -10);
+
+        target = obj.transform;
 
     }
 }

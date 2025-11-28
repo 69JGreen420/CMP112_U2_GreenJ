@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class playerDie : MonoBehaviour
+public class death : MonoBehaviour
 {
 
     public GameObject GameManager;

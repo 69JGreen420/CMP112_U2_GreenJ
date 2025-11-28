@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 
-public class playerMovement : MonoBehaviour
+public class shipMovement : MonoBehaviour
 {
 
     private bool isGrounded = false;
@@ -13,8 +13,6 @@ public class playerMovement : MonoBehaviour
     public float speedDecrease;
     public float speed;
     public float jumpForce;
-
-    public GameManager GameManager;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -42,7 +40,7 @@ public class playerMovement : MonoBehaviour
 
         rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
 
-        if (jumpRequested && isGrounded)
+        if (jumpRequested)
         {
 
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
@@ -50,13 +48,6 @@ public class playerMovement : MonoBehaviour
 
         }
 
-
-    }
-
-    public void setIsGrounded(bool ground)
-    {
-
-        isGrounded = ground;
 
     }
 
@@ -68,8 +59,8 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
-            isGrounded = true;
-            Debug.Log("Grounded is true");
+            isGrounded = false;
+            Debug.Log("Grounded is false");
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
 

@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 149042710}
   m_Layer: 5
   m_Name: restartButton
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -703,7 +703,7 @@ GameObject:
   - component: {fileID: 274432152}
   m_Layer: 5
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -860,7 +860,7 @@ Transform:
   m_GameObject: {fileID: 333357615}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.31, y: -4.59, z: -0.045610763}
+  m_LocalPosition: {x: 2.31, y: -3.88, z: -0.045610763}
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1063,7 +1063,7 @@ GameObject:
   - component: {fileID: 527291731}
   m_Layer: 5
   m_Name: GAME OVER
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1433,7 +1433,7 @@ GameObject:
   - component: {fileID: 692910271}
   m_Layer: 5
   m_Name: RETRY
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1768,9 +1768,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 763499175}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: gameOverUI
-  m_TagString: Untagged
+  m_TagString: UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
