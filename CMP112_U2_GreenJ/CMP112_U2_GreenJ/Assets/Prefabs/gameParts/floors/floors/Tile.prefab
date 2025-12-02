@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 925515883079429804}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -42,9 +42,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 925515883079429804}
     m_Modifications:
+    - target: {fileID: 750269746743959700, guid: c726e5b9edc98457a8efcf521069bf67, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 090d4f88d32154b8c972bfba70ad8994, type: 3}
     - target: {fileID: 3499565614670972160, guid: c726e5b9edc98457a8efcf521069bf67, type: 3}
       propertyPath: m_Name
       value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299103163707402901, guid: c726e5b9edc98457a8efcf521069bf67, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4299103163707402901, guid: c726e5b9edc98457a8efcf521069bf67, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6534874290447036007, guid: c726e5b9edc98457a8efcf521069bf67, type: 3}
       propertyPath: m_LocalPosition.x

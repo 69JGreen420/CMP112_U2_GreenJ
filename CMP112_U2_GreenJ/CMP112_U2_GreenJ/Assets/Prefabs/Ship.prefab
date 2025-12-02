@@ -192,4 +192,4 @@ MonoBehaviour:
   speedIncrease: 5
   speedDecrease: 8
   speed: 8
-  jumpForce: 8
+  jumpForce: 10

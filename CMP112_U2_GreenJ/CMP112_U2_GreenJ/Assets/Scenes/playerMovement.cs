@@ -52,7 +52,8 @@ public class playerMovement : MonoBehaviour
 
 
     }
-
+       
+    //isGrounded setter
     public void setIsGrounded(bool ground)
     {
 

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3597984926888571235}
   m_Layer: 8
-  m_Name: floorBig
+  m_Name: floorMedium
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,6 +97,10 @@ PrefabInstance:
     - target: {fileID: 3048129529309681979, guid: 22c22f846a8ea4efdb0829cce59fc795, type: 3}
       propertyPath: m_Name
       value: leftBarrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825219698130246669, guid: 22c22f846a8ea4efdb0829cce59fc795, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245,6 +249,10 @@ PrefabInstance:
     - target: {fileID: 3048129529309681979, guid: 22c22f846a8ea4efdb0829cce59fc795, type: 3}
       propertyPath: m_Name
       value: rightBarrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825219698130246669, guid: 22c22f846a8ea4efdb0829cce59fc795, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

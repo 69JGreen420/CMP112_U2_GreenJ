@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7650815345455030032}
   m_Layer: 8
-  m_Name: floorMedium
+  m_Name: floorSmall2
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
