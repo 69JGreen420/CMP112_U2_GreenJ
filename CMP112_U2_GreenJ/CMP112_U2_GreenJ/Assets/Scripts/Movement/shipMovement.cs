@@ -24,13 +24,8 @@ public class shipMovement : MonoBehaviour
 
     void Update()
     {
-
-        if (Keyboard.current.wKey.wasPressedThisFrame)
-        {
-
-            jumpRequested = true;
-
-        }
+        
+        jumpRequested = Keyboard.current.wKey.isPressed;
 
     }
 
@@ -43,14 +38,19 @@ public class shipMovement : MonoBehaviour
         if (jumpRequested)
         {
 
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            jumpRequested = false;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
         }
 
 
     }
 
+    public void setIsGrounded(bool ground)
+    {
+
+        isGrounded = ground;
+
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

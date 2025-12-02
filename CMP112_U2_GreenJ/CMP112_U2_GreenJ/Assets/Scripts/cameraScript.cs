@@ -12,7 +12,7 @@ public class cameraScript : MonoBehaviour
         if (target != null)
         {
 
-            transform.position = new Vector3(target.position.x + 3, target.position.y, -10);
+            transform.position = new Vector3(target.position.x + 5, target.position.y, -10);
 
         }
 

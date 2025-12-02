@@ -152,7 +152,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -192,4 +192,4 @@ MonoBehaviour:
   speedIncrease: 5
   speedDecrease: 8
   speed: 8
-  jumpForce: 10
+  jumpForce: 8
