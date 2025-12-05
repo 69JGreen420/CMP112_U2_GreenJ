@@ -3,6 +3,7 @@ using UnityEngine;
 public class death : MonoBehaviour
 {
 
+    //Include GameManager to connect gameOverUI to appear upon death
     public GameObject GameManager;
 
     //Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,7 +20,7 @@ public class death : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void Update()
     {
         
@@ -58,6 +59,15 @@ public class death : MonoBehaviour
 
             //When the active GameObject collides, activate GameManger (I.E turn on gameOverUI)
             GameManager.SetActive(true);
+
+
+        }
+
+        if (deathSoundPlayer.Instance != null)
+        {
+
+            //Call playDeathSound function inside die function
+            deathSoundPlayer.Instance.playDeathSound();
 
         }
 

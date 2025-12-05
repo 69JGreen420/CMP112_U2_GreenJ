@@ -20,10 +20,10 @@ public class shipMovement : MonoBehaviour
     public float speedIncrease;
     public float speedDecrease;
 
+    public GameObject deathSoundPlayer;
+
     //Include GameManager to connect UI
     public GameManager GameManager;
-
-    AudioSource jumpSound;
     AudioSource coinSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,8 +33,7 @@ public class shipMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         AudioSource[] sounds = GetComponents<AudioSource>();
-        jumpSound = sounds[0]; //Connect jumpSound audio to Ship
-        coinSound = sounds[1]; //Connect coinSound audio to Ship
+        coinSound = sounds[0]; //Connect coinSound audio to Ship
 
     }
 
@@ -54,7 +53,6 @@ public class shipMovement : MonoBehaviour
         if (Keyboard.current.wKey.wasPressedThisFrame)
         {
 
-            jumpSound.Play(); //When the Ship jumps, play jumpSound
             jumpSoundRequested = true;
 
         }

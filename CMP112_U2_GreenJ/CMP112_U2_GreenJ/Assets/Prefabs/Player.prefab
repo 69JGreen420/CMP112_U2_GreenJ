@@ -182,6 +182,7 @@ MonoBehaviour:
   jumpForce: 10
   speedIncrease: 5
   speedDecrease: 8
+  deathSoundPlayer: {fileID: 0}
   GameManager: {fileID: 0}
 --- !u!114 &4479977028064721827
 MonoBehaviour:
@@ -209,7 +210,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: bc0c465227acd8843a99a38350acbcc1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -306,7 +307,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c89b08a7f40c27f4abcd9157a868be20, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0

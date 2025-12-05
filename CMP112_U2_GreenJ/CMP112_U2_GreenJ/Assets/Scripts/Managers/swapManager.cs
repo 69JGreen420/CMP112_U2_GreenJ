@@ -25,6 +25,9 @@ public class swapManager : MonoBehaviour
         //Change camera target to Ship
         cameraScript.SetTarget(Ship);
 
+        //When GameObject is switched to Ship, decrease camera size
+        cameraScript.SetCameraSize(5f);
+
     }
 
     public void swapToPlayer(Vector3 spawnPosition)
@@ -47,6 +50,9 @@ public class swapManager : MonoBehaviour
 
         //Change camera target to Player
         cameraScript.SetTarget(Player);
+
+        //When GameObject is switched to Player, increase camera size
+        cameraScript.SetCameraSize(7f);
 
     }
 

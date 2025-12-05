@@ -19,6 +19,8 @@ public class playerMovement : MonoBehaviour
     public float speedIncrease;
     public float speedDecrease;
 
+    public GameObject deathSoundPlayer;
+
     //Include GameManager to connect UI
     public GameManager GameManager;
 
