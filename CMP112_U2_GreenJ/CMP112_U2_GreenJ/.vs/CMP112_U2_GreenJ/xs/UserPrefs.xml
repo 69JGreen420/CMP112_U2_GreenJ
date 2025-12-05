@@ -1,46 +1,40 @@
 ﻿<Properties StartupConfiguration="{FF5E5B83-3A37-E584-F8B3-694444858F29}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Managers/swapManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Transforms/swapToShip.cs">
     <Files>
-      <File FileName="Assets/deathSoundPlayer.cs" Line="36" Column="52" />
-      <File FileName="Assets/Scripts/death.cs" Line="36" Column="19" />
-      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="29" Column="40" />
-      <File FileName="Assets/Scenes/playerMovement.cs" Line="22" Column="39" />
+      <File FileName="Assets/Scripts/death.cs" />
+      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="52" Column="40" />
+      <File FileName="Assets/Scenes/playerMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Movement/shipMovement.cs" Line="55" Column="1" />
       <File FileName="Assets/Scripts/cameraScript.cs" Line="27" Column="32" />
-      <File FileName="Assets/Scripts/coinDestroy.cs" Line="36" Column="4" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="13" Column="2" />
-      <File FileName="Assets/Scripts/Transforms/swapToPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Transforms/swapToShip.cs" Line="20" Column="2" />
+      <File FileName="Assets/Scripts/coinDestroy.cs" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" />
+      <File FileName="Assets/Scripts/Transforms/swapToPlayer.cs" />
+      <File FileName="Assets/Scripts/Transforms/swapToShip.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CMP112_U2_GreenJ" expanded="True">
+          <Node name="CMP112_U2_GreenJ">
             <Node name="Assets" expanded="True">
               <Node name="Scenes" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="Managers" expanded="True">
-                  <Node name="swapManager.cs" selected="True" />
-                </Node>
+                <Node name="Managers" expanded="True" />
                 <Node name="Movement" expanded="True" />
-                <Node name="Transforms" expanded="True" />
+                <Node name="Transforms" expanded="True">
+                  <Node name="swapToShip.cs" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Unity" selected="True" />
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="395e8a1a-6a2c-42d1-b3ef-dd1f06138810" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3ce1d099-429f-47ac-a39a-cf0b03a147ec" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
