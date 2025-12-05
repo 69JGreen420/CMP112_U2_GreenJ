@@ -23,13 +23,18 @@ public class playerMovement : MonoBehaviour
     public GameManager GameManager;
 
     AudioSource jumpSound;
+    AudioSource coinSound;
+
 
     //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
-        jumpSound = GetComponent<AudioSource>(); //Connect jumpSound audio to Player
+
+        AudioSource[] sounds = GetComponents<AudioSource>();
+        jumpSound = sounds[0]; //Connect jumpSound audio to Player
+        coinSound = sounds[1]; //Connect coinSound audio to Player
 
     }
 
@@ -106,6 +111,14 @@ public class playerMovement : MonoBehaviour
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
+
+        }
+
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+
+            coinSound.Play();
+            Destroy(collision.gameObject);
 
         }
 

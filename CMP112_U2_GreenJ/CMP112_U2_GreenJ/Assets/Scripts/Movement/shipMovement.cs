@@ -24,13 +24,17 @@ public class shipMovement : MonoBehaviour
     public GameManager GameManager;
 
     AudioSource jumpSound;
+    AudioSource coinSound;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
-        jumpSound = GetComponent<AudioSource>(); //Connect jumpSound audio to Ship
+
+        AudioSource[] sounds = GetComponents<AudioSource>();
+        jumpSound = sounds[0]; //Connect jumpSound audio to Ship
+        coinSound = sounds[1]; //Connect coinSound audio to Ship
 
     }
 
@@ -122,6 +126,14 @@ public class shipMovement : MonoBehaviour
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
+
+        }
+
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+
+            coinSound.Play();
+            Destroy(collision.gameObject);
 
         }
 
