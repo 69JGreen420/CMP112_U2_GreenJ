@@ -4,23 +4,39 @@ using UnityEngine.InputSystem;
 
 public class playerMovement : MonoBehaviour
 {
-
+    
     private bool isGrounded = false;
     private bool jumpRequested = false;
     private Rigidbody2D rb;
+    
+    //Set direction to always be going right
     private float direction = 1;
-    public float speedIncrease;
-    public float speedDecrease;
+
     public float speed;
     public float jumpForce;
 
+    //Speed changers
+    public float speedIncrease;
+    public float speedDecrease;
+
+    public GameObject deathSoundPlayer;
+
+    //Include GameManager to connect UI
     public GameManager GameManager;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    AudioSource jumpSound;
+    AudioSource coinSound;
+
+
+    //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
+
+        AudioSource[] sounds = GetComponents<AudioSource>();
+        jumpSound = sounds[0]; //Connect jumpSound audio to Player
+        coinSound = sounds[1]; //Connect coinSound audio to Player
 
     }
 
@@ -36,7 +52,7 @@ public class playerMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    //Update is called once per frame
     void FixedUpdate()
     {
 
@@ -46,7 +62,8 @@ public class playerMovement : MonoBehaviour
         {
 
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            jumpRequested = false;
+            jumpSound.Play(); //When the Player jumps, play jumpSound
+            jumpRequested = false; //Reset jumpRequested so Player can't infinately jump
 
         }
 
@@ -81,9 +98,12 @@ public class playerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
+        //Speed changers (spped set in gameObject)
+
         if (collision.gameObject.CompareTag("speedBoost"))
         {
 
+            //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed += speedIncrease;
 
         }
@@ -91,7 +111,16 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("speedDecrease"))
         {
 
+            //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
+
+        }
+
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+
+            coinSound.Play();
+            Destroy(collision.gameObject);
 
         }
 
