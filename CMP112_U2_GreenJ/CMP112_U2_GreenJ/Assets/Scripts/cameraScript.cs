@@ -31,6 +31,7 @@ public class cameraScript : MonoBehaviour
     public void SetCameraSize(float newSize)
     {
 
+        //Update cameraSize when needed
         Camera.main.orthographicSize = newSize;
 
     }

@@ -7,7 +7,7 @@ public class swapManager : MonoBehaviour
     public GameObject Player;
     public GameObject Ship;
 
-    //Call in cameraScript so camera swap can happen
+    //Call in cameraScript so camera size change can happen
     public cameraScript cameraScript;
 
     public void swapToShip(Vector3 spawnPosition)

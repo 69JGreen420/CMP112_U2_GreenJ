@@ -9,6 +9,7 @@ public class winTrigger : MonoBehaviour
     void Start()
     {
 
+        //Set game to start (when loaded into new scenes, it's initially paused)
         Time.timeScale = 1f;
 
     }
@@ -22,6 +23,7 @@ public class winTrigger : MonoBehaviour
             //Pause gameplay
             Time.timeScale = 0f;
 
+            //Set gameWinUI to appear when Player collides with winTrigger GameObject
             gameWinUI.SetActive(true);
 
         }

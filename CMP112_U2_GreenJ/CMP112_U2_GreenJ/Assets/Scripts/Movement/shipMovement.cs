@@ -20,6 +20,7 @@ public class shipMovement : MonoBehaviour
     public float speedIncrease;
     public float speedDecrease;
 
+    //Call deathSoundPlayer to interact with script
     public GameObject deathSoundPlayer;
 
     //Include GameManager to connect UI
