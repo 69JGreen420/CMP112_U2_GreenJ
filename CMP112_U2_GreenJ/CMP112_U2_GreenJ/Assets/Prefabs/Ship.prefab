@@ -195,7 +195,7 @@ MonoBehaviour:
   speed: 10
   jumpForce: 5
   speedIncrease: 5
-  speedDecrease: 8
+  speedDecrease: 5
   deathSoundPlayer: {fileID: 0}
   GameManager: {fileID: 0}
 --- !u!82 &-1216436916008359043

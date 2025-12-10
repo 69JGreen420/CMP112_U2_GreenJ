@@ -36,6 +36,7 @@ public class deathSoundPlayer : MonoBehaviour
     public void playDeathSound()
     {
 
+        //When called, play death sounds
         deathSound.Play();
 
     }

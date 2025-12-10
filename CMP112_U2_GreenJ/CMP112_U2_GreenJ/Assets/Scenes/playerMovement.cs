@@ -39,6 +39,9 @@ public class playerMovement : MonoBehaviour
         jumpSound = sounds[0]; //Connect jumpSound audio to Player
         coinSound = sounds[1]; //Connect coinSound audio to Player
 
+        //Set isGrounded initially to true upon start
+        isGrounded = true;
+
     }
 
     void Update()
@@ -87,6 +90,7 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
+            //If touching the Ground layer, set isGrounded to true
             isGrounded = true;
             Debug.Log("Grounded is true");
 

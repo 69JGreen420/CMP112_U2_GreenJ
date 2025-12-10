@@ -98,6 +98,8 @@ public class shipMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
+            //Set isGrounded to false even when touching ground layer
+            //To allow Ship to fly on ground
             isGrounded = false;
             Debug.Log("Grounded is false");
 
