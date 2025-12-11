@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 7202533066044989721}
   - component: {fileID: 8259324732906543755}
   - component: {fileID: 8214693590791538236}
-  - component: {fileID: -8510067259734352397}
   m_Layer: 8
-  m_Name: shipTransform
+  m_Name: playerTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.43, y: -0.24, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 090d4f88d32154b8c972bfba70ad8994, type: 3}
-  m_Color: {r: 0.8679245, g: 0.4545413, b: 0.012281928, a: 1}
+  m_Color: {r: 0.5252992, g: 1, b: 0.3254717, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -163,16 +162,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-8510067259734352397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8253726719491340820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b54baa97a5fe4fcb8ec74dc5fd53147, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  swapManager: {fileID: 0}

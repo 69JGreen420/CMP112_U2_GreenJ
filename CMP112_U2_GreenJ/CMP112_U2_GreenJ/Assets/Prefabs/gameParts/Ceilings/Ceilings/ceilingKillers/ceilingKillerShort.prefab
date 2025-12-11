@@ -50,11 +50,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1737443469583577989, guid: 1eb3e623568d24bc2a8b357f28c72775, type: 3}
       propertyPath: m_Name
-      value: ceilingShort (4) Variant
+      value: ceilingKillerShort
       objectReference: {fileID: 0}
     - target: {fileID: 5441816178275505789, guid: 1eb3e623568d24bc2a8b357f28c72775, type: 3}
       propertyPath: m_TagString
       value: deathBarrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059568522383596004, guid: 1eb3e623568d24bc2a8b357f28c72775, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059568522383596004, guid: 1eb3e623568d24bc2a8b357f28c72775, type: 3}
+      propertyPath: m_Color.g
+      value: 0.19607843
+      objectReference: {fileID: 0}
+    - target: {fileID: 9059568522383596004, guid: 1eb3e623568d24bc2a8b357f28c72775, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

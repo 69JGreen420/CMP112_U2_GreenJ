@@ -1,28 +1,37 @@
 ﻿<Properties StartupConfiguration="{FF5E5B83-3A37-E584-F8B3-694444858F29}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Transforms/swapToShip.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b4f90de-037c-4a29-a2f6-35299bb2d3cd" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/playerMovement.cs">
     <Files>
-      <File FileName="Assets/Scripts/death.cs" />
-      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="52" Column="40" />
+      <File FileName="Assets/Scripts/death.cs" Line="79" Column="6" />
+      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="29" Column="40" />
       <File FileName="Assets/Scenes/playerMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Movement/shipMovement.cs" Line="55" Column="1" />
       <File FileName="Assets/Scripts/cameraScript.cs" Line="27" Column="32" />
-      <File FileName="Assets/Scripts/coinDestroy.cs" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" />
-      <File FileName="Assets/Scripts/Transforms/swapToPlayer.cs" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Transforms/swapToPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Transforms/swapToShip.cs" Line="1" Column="1" />
+      <File FileName="Assets/levelManager.cs" Line="28" Column="9" />
+      <File FileName="Assets/winTrigger.cs" Line="34" Column="10" />
+      <File FileName="Assets/UniversalRenderPipelineGlobalSettings.asset" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/death/deathSoundPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets/gameWinUISetup.cs" Line="11" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CMP112_U2_GreenJ">
             <Node name="Assets" expanded="True">
-              <Node name="Scenes" expanded="True" />
+              <Node name="Scenes" expanded="True">
+                <Node name="playerMovement.cs" selected="True" />
+              </Node>
               <Node name="Scripts" expanded="True">
+                <Node name="death" expanded="True" />
                 <Node name="Managers" expanded="True" />
                 <Node name="Movement" expanded="True" />
-                <Node name="Transforms" expanded="True">
-                  <Node name="swapToShip.cs" selected="True" />
-                </Node>
+                <Node name="Transforms" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -30,11 +39,7 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="3ce1d099-429f-47ac-a39a-cf0b03a147ec" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>

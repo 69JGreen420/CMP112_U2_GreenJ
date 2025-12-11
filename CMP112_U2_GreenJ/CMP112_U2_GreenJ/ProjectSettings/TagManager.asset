@@ -15,6 +15,7 @@ TagManager:
   - Ship
   - Audio
   - Transform
+  - Ceiling
   layers:
   - Default
   - TransparentFX
