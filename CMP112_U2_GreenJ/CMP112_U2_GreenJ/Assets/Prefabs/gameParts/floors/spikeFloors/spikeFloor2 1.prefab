@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6197412080258737293}
   m_Layer: 0
-  m_Name: spikeFloorGround
+  m_Name: spikeFloor2 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

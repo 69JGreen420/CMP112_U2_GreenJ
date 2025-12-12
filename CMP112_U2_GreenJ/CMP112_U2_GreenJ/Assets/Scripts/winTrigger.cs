@@ -17,14 +17,14 @@ public class winTrigger : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.CompareTag("Player") || collision.CompareTag("Ship"))
+        if (collision.CompareTag("Player"))
         {
 
             //Pause gameplay
             Time.timeScale = 0f;
 
-            //Set gameWinUI to appear when Player controlled GameObject collides with winTrigger GameObject
-            gameWinUI.SetActive(true); 
+            //Set gameWinUI to appear when Player collides with winTrigger GameObject
+            gameWinUI.SetActive(true);
 
         }
 

@@ -1,34 +1,39 @@
 ﻿<Properties StartupConfiguration="{FF5E5B83-3A37-E584-F8B3-694444858F29}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="596c92e9-b201-4bfe-86dc-ec34f3544c57" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="4b4f90de-037c-4a29-a2f6-35299bb2d3cd" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scenes/playerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/death/death.cs">
     <Files>
-      <File FileName="Assets/Scripts/death.cs" Line="79" Column="6" />
-      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="29" Column="40" />
+      <File FileName="Assets/Scripts/Managers/swapManager.cs" Line="54" Column="70" />
       <File FileName="Assets/Scenes/playerMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Movement/shipMovement.cs" Line="55" Column="1" />
-      <File FileName="Assets/Scripts/cameraScript.cs" Line="27" Column="32" />
-      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/cameraScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Managers/GameManager.cs" Line="14" Column="2" />
       <File FileName="Assets/Scripts/Transforms/swapToPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Transforms/swapToShip.cs" Line="1" Column="1" />
-      <File FileName="Assets/levelManager.cs" Line="28" Column="9" />
-      <File FileName="Assets/winTrigger.cs" Line="34" Column="10" />
-      <File FileName="Assets/UniversalRenderPipelineGlobalSettings.asset" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/death/deathSoundPlayer.cs" Line="1" Column="1" />
-      <File FileName="Assets/gameWinUISetup.cs" Line="11" Column="6" />
+      <File FileName="Assets/UniversalRenderPipelineGlobalSettings.asset" />
+      <File FileName="Assets/Scripts/death/deathSoundPlayer.cs" Line="45" Column="1" />
+      <File FileName="Assets/Scripts/FloorMove/floorMoveRight.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/FloorMove/floorMoveUp.cs" Line="60" Column="1" />
+      <File FileName="Assets/Scripts/winTrigger.cs" Line="27" Column="40" />
+      <File FileName="Assets/Scripts/Managers/levelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/death/death.cs" Line="82" Column="1" />
+      <File FileName="Assets/Scripts/FloorMove/floorMoveDown.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/FloorMove/floorMoveLeft.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/gameWinUISetup.cs" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CMP112_U2_GreenJ">
+          <Node name="CMP112_U2_GreenJ" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scenes" expanded="True">
-                <Node name="playerMovement.cs" selected="True" />
-              </Node>
+              <Node name="Scenes" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="death" expanded="True" />
+                <Node name="FloorMove" expanded="True" />
                 <Node name="Managers" expanded="True" />
                 <Node name="Movement" expanded="True" />
                 <Node name="Transforms" expanded="True" />
@@ -39,7 +44,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
 </Properties>
