@@ -7,6 +7,10 @@ public class playerMovement : MonoBehaviour
     
     private bool isGrounded = false;
     private bool jumpRequested = false;
+    private bool insideJumper = false;
+    private bool speedBoost = false;
+    private bool speedSlower = false;
+    private int jumpCount;
     private Rigidbody2D rb;
     
     //Set direction to always be going right
@@ -35,6 +39,7 @@ public class playerMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        //AudioSource stored as an array to allow multiple sound entries
         AudioSource[] sounds = GetComponents<AudioSource>();
         jumpSound = sounds[0]; //Connect jumpSound audio to Player
         coinSound = sounds[1]; //Connect coinSound audio to Player
@@ -50,7 +55,29 @@ public class playerMovement : MonoBehaviour
         if (Keyboard.current.wKey.wasPressedThisFrame)
         {
 
+            //Set jumpRequested to true when w key is pressed
             jumpRequested = true;
+
+            //Jumper logic defined in Update() so jump can happen any frame inside GameObject
+            if (insideJumper && jumpCount == 0 && !speedBoost)
+            {
+
+                rb.AddForce(Vector2.up * 15, ForceMode2D.Impulse);
+                jumpSound.Play();
+                jumpCount = 1; //Set jumpCount to 1
+                jumpRequested = false; //Disallow jump after pressed
+
+            }
+
+            if (insideJumper && jumpCount == 0 && speedBoost)
+            {
+
+                rb.AddForce(Vector2.up * 30, ForceMode2D.Impulse);
+                jumpSound.Play();
+                jumpCount = 1; //Set jumpCount to 1
+                jumpRequested = false; //Disallow jump after pressed
+
+            }
 
         }
 
@@ -110,6 +137,14 @@ public class playerMovement : MonoBehaviour
 
             //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed += speedIncrease;
+            speedBoost = true;
+
+        }
+
+        if (!collision.gameObject.CompareTag("speedBoost"))
+        {
+
+            speedBoost = false;
 
         }
 
@@ -118,6 +153,14 @@ public class playerMovement : MonoBehaviour
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
+            speedSlower = true;
+
+        }
+
+        if (!collision.gameObject.CompareTag("speedDecrease"))
+        {
+
+            speedSlower = false;
 
         }
 
@@ -126,6 +169,29 @@ public class playerMovement : MonoBehaviour
 
             coinSound.Play();
             Destroy(collision.gameObject);
+
+        }
+
+        if (collision.gameObject.CompareTag("Jumper"))
+        {
+
+            //Set insideJumper to true when active. This is linked to code in Update()
+            insideJumper = true;
+
+        }
+
+        if (collision.gameObject.CompareTag("Bouncer") && isGrounded)
+        {
+
+            //When the Player interacts with this, they will launch up
+            rb.AddForce(Vector2.up * (jumpForce + 8), ForceMode2D.Impulse);
+
+        }
+
+        if (collision.gameObject.CompareTag("Bouncer") && !isGrounded) {
+
+            //When the Player interacts with this, they will launch up
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
         }
 
@@ -140,6 +206,20 @@ public class playerMovement : MonoBehaviour
 
             isGrounded = false;
             Debug.Log("Grounded is false");
+
+        }
+
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Jumper"))
+        {
+
+            //After Player has left Jumper, reset everything
+            insideJumper = false;
+            jumpCount = 0;
 
         }
 

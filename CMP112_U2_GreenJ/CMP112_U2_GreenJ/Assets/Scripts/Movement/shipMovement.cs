@@ -33,6 +33,7 @@ public class shipMovement : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
 
+        //AudioSource stored as an array to allow multiple sound entries
         AudioSource[] sounds = GetComponents<AudioSource>();
         coinSound = sounds[0]; //Connect coinSound audio to Ship
 
@@ -135,6 +136,14 @@ public class shipMovement : MonoBehaviour
 
             coinSound.Play();
             Destroy(collision.gameObject);
+
+        }
+
+        if (collision.gameObject.CompareTag("Bouncer"))
+        {
+
+            //When the Ship interacts with this, they will launch up
+            rb.AddForce(Vector2.up * (jumpForce + 7), ForceMode2D.Impulse);
 
         }
 

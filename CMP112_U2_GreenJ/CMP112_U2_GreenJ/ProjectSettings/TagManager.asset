@@ -16,6 +16,8 @@ TagManager:
   - Audio
   - Transform
   - Ceiling
+  - Jumper
+  - Bouncer
   layers:
   - Default
   - TransparentFX
