@@ -8,6 +8,8 @@ public class shipMovement : MonoBehaviour
     private bool isGrounded = false;
     private bool jumpRequested = false;
     private bool jumpSoundRequested = false;
+    private bool speedBoost = false;
+    private bool speedSlower = false;
     private Rigidbody2D rb;
 
     //Set direction to always be going right
@@ -119,7 +121,30 @@ public class shipMovement : MonoBehaviour
         {
 
             //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
-            speed += speedIncrease;
+            speed += (speedIncrease * 2);
+            speedBoost = true;
+
+        }
+
+        if (!collision.gameObject.CompareTag("speedBoost"))
+        {
+
+            speedBoost = false;
+
+        }
+
+        if (collision.gameObject.CompareTag("doubleBoost"))
+        {
+
+            speed = speedIncrease * 2;
+            speedBoost = true;
+
+        }
+
+        if (!collision.gameObject.CompareTag("doubleBoost"))
+        {
+
+            speedBoost = false;
 
         }
 
@@ -128,6 +153,14 @@ public class shipMovement : MonoBehaviour
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
+            speedSlower = true;
+
+        }
+
+        if (!collision.gameObject.CompareTag("speedDecrease"))
+        {
+
+            speedSlower = false;
 
         }
 
@@ -143,7 +176,7 @@ public class shipMovement : MonoBehaviour
         {
 
             //When the Ship interacts with this, they will launch up
-            rb.AddForce(Vector2.up * (jumpForce + 7), ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * (jumpForce + 8), ForceMode2D.Impulse);
 
         }
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8214693590791538236}
   m_Layer: 8
   m_Name: playerTransform
-  m_TagString: Untagged
+  m_TagString: Transform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

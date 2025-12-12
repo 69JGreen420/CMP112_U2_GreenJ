@@ -62,7 +62,7 @@ public class playerMovement : MonoBehaviour
             if (insideJumper && jumpCount == 0 && !speedBoost)
             {
 
-                rb.AddForce(Vector2.up * 15, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.up * (jumpForce + 5), ForceMode2D.Impulse);
                 jumpSound.Play();
                 jumpCount = 1; //Set jumpCount to 1
                 jumpRequested = false; //Disallow jump after pressed
@@ -72,7 +72,8 @@ public class playerMovement : MonoBehaviour
             if (insideJumper && jumpCount == 0 && speedBoost)
             {
 
-                rb.AddForce(Vector2.up * 30, ForceMode2D.Impulse);
+                //Increase jump height for jumper when Player's speed has increased
+                rb.AddForce(Vector2.up * (jumpForce + 20), ForceMode2D.Impulse);
                 jumpSound.Play();
                 jumpCount = 1; //Set jumpCount to 1
                 jumpRequested = false; //Disallow jump after pressed

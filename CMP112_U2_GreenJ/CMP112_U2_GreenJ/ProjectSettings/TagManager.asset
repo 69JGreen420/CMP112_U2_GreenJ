@@ -18,6 +18,7 @@ TagManager:
   - Ceiling
   - Jumper
   - Bouncer
+  - doubleBoost
   layers:
   - Default
   - TransparentFX
