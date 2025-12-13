@@ -32,6 +32,7 @@ public class winTrigger : MonoBehaviour
         {
 
             gameWinUI.SetActive(false);
+            Time.timeScale = 1f;
 
         }
 
