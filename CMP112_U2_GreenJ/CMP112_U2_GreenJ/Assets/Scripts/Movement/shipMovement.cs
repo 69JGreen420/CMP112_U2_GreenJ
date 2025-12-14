@@ -8,8 +8,8 @@ public class shipMovement : MonoBehaviour
     private bool isGrounded = false;
     private bool jumpRequested = false;
     private bool jumpSoundRequested = false;
-    private bool speedBoost = false;
-    private bool speedSlower = false;
+    /*private bool speedBoost = false;
+    private bool speedSlower = false;*/
     private Rigidbody2D rb;
 
     //Set direction to always be going right
@@ -121,48 +121,33 @@ public class shipMovement : MonoBehaviour
         {
 
             //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
-            speed += (speedIncrease * 2);
-            speedBoost = true;
+            speed += speedIncrease;
+            /*speedBoost = true;*/
 
         }
 
-        if (!collision.gameObject.CompareTag("speedBoost"))
+        /*if (!collision.gameObject.CompareTag("speedBoost"))
         {
 
             speedBoost = false;
 
-        }
-
-        if (collision.gameObject.CompareTag("doubleBoost"))
-        {
-
-            speed = speedIncrease * 2;
-            speedBoost = true;
-
-        }
-
-        if (!collision.gameObject.CompareTag("doubleBoost"))
-        {
-
-            speedBoost = false;
-
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("speedDecrease"))
         {
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
-            speedSlower = true;
+            /*speedSlower = true;*/
 
         }
 
-        if (!collision.gameObject.CompareTag("speedDecrease"))
+        /*if (!collision.gameObject.CompareTag("speedDecrease"))
         {
 
             speedSlower = false;
 
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("Coin"))
         {

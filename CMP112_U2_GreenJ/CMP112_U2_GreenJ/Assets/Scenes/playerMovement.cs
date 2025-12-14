@@ -9,7 +9,7 @@ public class playerMovement : MonoBehaviour
     private bool jumpRequested = false;
     private bool insideJumper = false;
     private bool speedBoost = false;
-    private bool speedSlower = false;
+    /*private bool speedSlower = false;*/
     private int jumpCount;
     private Rigidbody2D rb;
     
@@ -154,16 +154,16 @@ public class playerMovement : MonoBehaviour
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
-            speedSlower = true;
+            /*speedSlower = true;*/
 
         }
 
-        if (!collision.gameObject.CompareTag("speedDecrease"))
+        /*if (!collision.gameObject.CompareTag("speedDecrease"))
         {
 
             speedSlower = false;
 
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("Coin"))
         {

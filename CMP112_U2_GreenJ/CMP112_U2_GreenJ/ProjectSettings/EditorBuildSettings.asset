@@ -9,10 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/TestScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Game/UIScenes/gameStart.unity
+    guid: 76369f23b83e54bdab152a303bd44cf9
+  - enabled: 1
     path: Assets/Scenes/Game/Levels/Level1.unity
     guid: 99290a12d5741425e8487298b93e6144
   - enabled: 1
-    path: Assets/Scenes/Game/Levels/level2.unity
+    path: Assets/Scenes/Game/Levels/Level2.unity
     guid: 13fc1a8bc77ae41a4a166e59573f10f0
   - enabled: 1
     path: Assets/Scenes/Game/Levels/Level3.unity
