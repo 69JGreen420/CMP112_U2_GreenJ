@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3899636871573306207}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ceilingHitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}

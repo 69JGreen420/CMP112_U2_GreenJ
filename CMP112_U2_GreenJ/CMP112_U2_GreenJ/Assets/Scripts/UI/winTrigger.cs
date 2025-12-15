@@ -3,8 +3,8 @@ using UnityEngine;
 public class winTrigger : MonoBehaviour
 {
 
-    //Add levelWinUI to be triggered on isTrigger collision from Player to GameObject
-    public GameObject levelWinUI;
+    //Add gameWinUI to be triggered on isTrigger collision from Player to GameObject
+    public GameObject gameWinUI;
 
     void Start()
     {
@@ -23,15 +23,15 @@ public class winTrigger : MonoBehaviour
             //Pause gameplay
             Time.timeScale = 0f;
 
-            //Set levelWinUI to appear when Player collides with winTrigger GameObject
-            levelWinUI.SetActive(true);
+            //Set gameWinUI to appear when Player collides with winTrigger GameObject
+            gameWinUI.SetActive(true);
 
         }
 
         else
         {
 
-            levelWinUI.SetActive(false);
+            gameWinUI.SetActive(false);
             Time.timeScale = 1f;
 
         }

@@ -19,7 +19,6 @@ TagManager:
   - Jumper
   - Bouncer
   - doubleBoost
-  - Wall
   layers:
   - Default
   - TransparentFX
@@ -27,7 +26,7 @@ TagManager:
   - Audio
   - Water
   - UI
-  - Wall
+  - 
   - 
   - Ground
   - 
