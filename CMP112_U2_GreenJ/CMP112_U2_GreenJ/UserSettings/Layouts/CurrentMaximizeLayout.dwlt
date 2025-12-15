@@ -97,7 +97,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -246,26 +246,26 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a2f5feff
-      m_LastClickedID: -68190
-      m_ExpandedIDs: 9aecfeffbaecfeff7cf8feff3cfafeffa4fbfeff3608ffff9e09ffff620bffff620fffff
+      m_SelectedIDs: 9ac60000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 9ca4fcffcab7fcffaec0fcff9ecffcff10e3fcffb2f2fcffd605fdffc614fdffec27fdffdc36fdff004afdffe252fdffd261fdffd066fdff287afdff5289fdff3492fdff24a1fdff0eb0fdffd8b1fdff24b3fdff6cb4fdff86c4fdff6ed3fdff94dcfdff84ebfdff32eefdff02f2fdffbe0cfeffa415feff70a0feffaeb0feffd2c3feff6ed8feff00e9feff02f3feffc48bffff4cbbffff3cd9ffff0cfbffff16b300008ab30000fab30000e6de00005af8000012f900006cf9000076f90000b8f90000faf900008aff0000240001007a000100840001005603010052040100fe0401007c0501009e050100ae0b0100ec0b0100120c0100dc0c0100f60c01001e100100463101005832010062320100e6320100f045010064460100c4460100d44601009c47010054480100ca480100f64b0100344c01005a4c0100ce4c0100244d01003e4d0100dc5c0100d85d0100845e0100f85e0100025f0100245f0100f87601007e770100d4770100ee770100787a0100f67a0100207b0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: rotatingSpike (1)
-        m_OriginalName: rotatingSpike (1)
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -71642
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 5}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -865,9 +865,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 11.146782, y: 10.967022, z: 0.05193967}
+    m_Target: {x: 432.99832, y: 140.68404, z: -3.980105}
     speed: 2
-    m_Value: {x: 11.146782, y: 10.967022, z: 0.05193967}
+    m_Value: {x: 432.99832, y: 140.68404, z: -3.980105}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -917,9 +917,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.444983
+    m_Target: 408.00833
     speed: 2
-    m_Value: 17.444983
+    m_Value: 408.00833
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1027,7 +1027,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes/Game/UIScenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1037,16 +1037,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes/Game/UIScenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/jgree/Documents/UnityProjects/CMP112_U2_GreenJ/CMP112_U2_GreenJ/CMP112_U2_GreenJ
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 1c040100
-    m_LastClickedID: 66588
-    m_ExpandedIDs: 000000004e000100e2060100ae0b0100e0120100221b010000ca9a3bffffff7f
+    m_SelectedIDs: 02bf0000
+    m_LastClickedID: 48898
+    m_ExpandedIDs: 00000000b8bd000008be0000fabe000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1075,7 +1075,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000b8bd000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1101,8 +1101,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a2f5feff
-    m_LastClickedInstanceID: -68190
+    m_SelectedInstanceIDs: 9ac60000
+    m_LastClickedInstanceID: 50842
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:

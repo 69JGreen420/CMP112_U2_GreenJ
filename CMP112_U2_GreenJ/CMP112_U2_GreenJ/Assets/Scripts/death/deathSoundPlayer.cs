@@ -3,6 +3,7 @@ using UnityEngine;
 public class deathSoundPlayer : MonoBehaviour
 {
 
+    //Singleton instance - allowing any other script to call
     public static deathSoundPlayer Instance;
     AudioSource deathSound;
 
@@ -12,6 +13,7 @@ public class deathSoundPlayer : MonoBehaviour
         if (Instance == null)
         {
 
+            //Set instance to itself (deathSoundPlayer)
             Instance = this;
 
         }
@@ -19,6 +21,7 @@ public class deathSoundPlayer : MonoBehaviour
         else
         {
 
+            //If there are any other instances, destroy the object, allowing for only one sound to play
             Destroy(gameObject);
             return;
 

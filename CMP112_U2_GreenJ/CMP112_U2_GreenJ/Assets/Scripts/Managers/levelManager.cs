@@ -7,6 +7,7 @@ public class levelManager : MonoBehaviour
     //Call GameManager to interact with script
     public GameManager GameManager;
 
+
     public void LoadLevel1()
     {
 
@@ -31,7 +32,7 @@ public class levelManager : MonoBehaviour
     public void loadNextLevel()
     {
 
-        //Load next scene in list when called
+        //Load next scene in build profile when function is called
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentIndex + 1);
 

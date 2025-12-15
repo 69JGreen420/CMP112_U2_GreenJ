@@ -14,7 +14,7 @@ public class fakePlayerSpawner : MonoBehaviour
 
         //Set random value from -5 to 5
         float randomX = Random.Range(-5f, 5f);
-        //Set spawnPosition to randomnX value (x coord) along 3 in y coord
+        //Set spawnPosition to randomnX value (x-coord) along 2 in y-coord
         Vector3 spawnPosition = new Vector3(randomX, 2f, 0f);
 
         //Spawn fakePlayer GameObject at runtime (Quaternion.identity used to keep orientation neutral

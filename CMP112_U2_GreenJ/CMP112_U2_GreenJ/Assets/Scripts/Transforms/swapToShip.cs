@@ -12,6 +12,7 @@ public class swapToShip : MonoBehaviour
         {
 
             //When the Player collides with transform GameObject, switch to Ship GameObject
+            //at the Player's last position
             swapManager.swapToShip(collision.transform.position);
 
         }

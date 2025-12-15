@@ -8,8 +8,6 @@ public class shipMovement : MonoBehaviour
     private bool isGrounded = false;
     private bool jumpRequested = false;
     private bool jumpSoundRequested = false;
-    /*private bool speedBoost = false;
-    private bool speedSlower = false;*/
     private Rigidbody2D rb;
 
     //Set direction to always be going right
@@ -29,7 +27,7 @@ public class shipMovement : MonoBehaviour
     public GameManager GameManager;
     AudioSource coinSound;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
@@ -117,51 +115,33 @@ public class shipMovement : MonoBehaviour
 
         //Speed changers (speed set in gameObject)
 
+
+        //speedBoost
         if (collision.gameObject.CompareTag("speedBoost"))
         {
 
             //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed += speedIncrease;
-            /*speedBoost = true;*/
 
         }
 
-        /*if (!collision.gameObject.CompareTag("speedBoost"))
-        {
-
-            speedBoost = false;
-
-        }*/
-
+        //speedDecrease
         if (collision.gameObject.CompareTag("speedDecrease"))
         {
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
-            /*speedSlower = true;*/
 
         }
 
-        /*if (!collision.gameObject.CompareTag("speedDecrease"))
-        {
 
-            speedSlower = false;
-
-        }*/
-
+        //Coin
         if (collision.gameObject.CompareTag("Coin"))
         {
 
+            //Play coin sound upon isTrigger collision
             coinSound.Play();
-            Destroy(collision.gameObject);
-
-        }
-
-        if (collision.gameObject.CompareTag("Bouncer"))
-        {
-
-            //When the Ship interacts with this, they will launch up
-            rb.AddForce(Vector2.up * (jumpForce + 8), ForceMode2D.Impulse);
+            Destroy(collision.gameObject); //Destroy GameObject upon isTrigger collision
 
         }
 
@@ -174,6 +154,7 @@ public class shipMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
+            //Set isGrounded to false when exiting ground, disallowing a jump
             isGrounded = false;
             Debug.Log("Grounded is false");
 

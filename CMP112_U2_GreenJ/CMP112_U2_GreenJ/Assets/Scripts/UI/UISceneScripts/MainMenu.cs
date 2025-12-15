@@ -1,4 +1,6 @@
-using UnityEngine;
+//Unused script
+
+/*using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
@@ -25,4 +27,4 @@ public class MainMenu : MonoBehaviour
 
     }
 
-}
+}*/

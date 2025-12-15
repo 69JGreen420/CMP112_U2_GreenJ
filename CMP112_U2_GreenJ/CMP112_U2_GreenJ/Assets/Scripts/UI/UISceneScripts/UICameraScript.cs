@@ -3,15 +3,15 @@ using UnityEngine;
 public class UICameraScript : MonoBehaviour
 {
 
+    //Set target to active Player-controlled GameObject
     public Transform target;
 
     //LateUpdeate always used for camera scripts
     void LateUpdate()
     {
 
-            //Camera setup
-            transform.position = new Vector3(target.position.x, target.position.y + 4, -10);
-
+        //Camera offset
+        transform.position = new Vector3(target.position.x, target.position.y + 4, -10);
 
     }
 

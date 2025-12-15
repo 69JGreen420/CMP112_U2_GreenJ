@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     {
 
         //When function is called, reload current scene
+        //(Function is called inside restartButton button
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
+
 }

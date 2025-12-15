@@ -20,12 +20,6 @@ public class death : MonoBehaviour
 
     }
 
-    //Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -33,6 +27,7 @@ public class death : MonoBehaviour
         if (collision.gameObject.CompareTag("deathBarrier") || collision.gameObject.CompareTag("Spike"))
         {
 
+            //Call death function when collision instance occurs
             die();
 
         }
@@ -46,6 +41,7 @@ public class death : MonoBehaviour
         if (collision.gameObject.CompareTag("deathBarrier"))
         {
 
+            //Call death function when collision instance occurs
             die();
 
         }
@@ -66,14 +62,15 @@ public class death : MonoBehaviour
         if (deathSoundPlayer.Instance != null)
         {
 
-            //Call playDeathSound function inside die function
-            deathSoundPlayer.Instance.playDeathSound();
+            //Play death sound from deathSoundPlayer script
+            //We do it seperately as otherwise, the sound would end when the GameObject is destroyed
+            deathSoundPlayer.Instance.playDeathSound(); //Singleton pattern, only one instance allowed
 
         }
 
         //Destroy active gameObject
         Destroy(gameObject);
-        Debug.Log("Player died!");
+        Debug.Log("Active GameObject died!");
 
 
     }

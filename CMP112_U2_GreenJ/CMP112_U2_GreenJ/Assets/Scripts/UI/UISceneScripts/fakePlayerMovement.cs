@@ -92,10 +92,11 @@ public class fakePlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
-            // If touching the Ground layer, set isGrounded to true
+            //If touching the Ground layer, set isGrounded to true
             isGrounded = true;
             Debug.Log("Grounded is true");
 
+            //Set jumpCount to 0
             jumpCount = 0;
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
@@ -107,33 +108,19 @@ public class fakePlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.gameObject.CompareTag("Coin"))
-        {
-
-            coinSound.Play();
-            Destroy(collision.gameObject);
-
-        }
-
+        //Jumper
         if (collision.gameObject.CompareTag("Jumper"))
         {
 
-            // Set insideJumper to true when active. This is linked to code in Update()
+            //Set insideJumper to true when active, allowing for a jump
             insideJumper = true;
-
-        }
-
-        if (collision.gameObject.CompareTag("Bouncer") && isGrounded)
-        {
-
-            // When the Player interacts with this, they will launch up
-            rb.AddForce(Vector2.up * (jumpForce + 8), ForceMode2D.Impulse);
 
         }
 
         if (collision.gameObject.CompareTag("Wall"))
         {
 
+            //Upon touching a Wall, flip fakePlayer's x-direction
             direction *= -1;
 
         }
@@ -147,6 +134,7 @@ public class fakePlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
+            //Set isGrounded to false when exiting Ground, disallowing an air jump
             isGrounded = false;
             Debug.Log("Grounded is false");
 
@@ -160,7 +148,7 @@ public class fakePlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Jumper"))
         {
 
-            // After Player has left Jumper, reset everything
+            //After Player has left Jumper, reset everything
             insideJumper = false;
             jumpCount = 0;
 

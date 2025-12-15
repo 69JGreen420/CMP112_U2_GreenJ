@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class gameWinUISetup : MonoBehaviour
 {
+
+    //Awake used to call function upon active state
     void Awake()
     {
 
@@ -9,4 +11,5 @@ public class gameWinUISetup : MonoBehaviour
         gameObject.SetActive(false);
 
     }
+
 }

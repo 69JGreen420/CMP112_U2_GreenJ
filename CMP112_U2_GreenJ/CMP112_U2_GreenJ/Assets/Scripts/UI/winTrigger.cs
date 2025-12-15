@@ -20,7 +20,7 @@ public class winTrigger : MonoBehaviour
         if (collision.CompareTag("Player") || collision.CompareTag("Ship"))
         {
 
-            //Pause gameplay
+            //Pause active screen
             Time.timeScale = 0f;
 
             //Set gameWinUI to appear when Player collides with winTrigger GameObject
@@ -31,10 +31,13 @@ public class winTrigger : MonoBehaviour
         else
         {
 
-            gameWinUI.SetActive(false);
-            Time.timeScale = 1f;
+            //If the Player-controlled GameObject has not interacted with winTrigger
+
+            gameWinUI.SetActive(false); //Set gameWinUI to inactive
+            Time.timeScale = 1f; //Keep active scene running
 
         }
 
     }
-} 
+
+}

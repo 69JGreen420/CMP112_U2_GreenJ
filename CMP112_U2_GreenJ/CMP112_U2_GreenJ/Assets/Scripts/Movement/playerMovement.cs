@@ -8,8 +8,6 @@ public class playerMovement : MonoBehaviour
     private bool isGrounded = false;
     private bool jumpRequested = false;
     private bool insideJumper = false;
-    private bool speedBoost = false;
-    /*private bool speedSlower = false;*/
     private int jumpCount;
     private Rigidbody2D rb;
     
@@ -31,7 +29,6 @@ public class playerMovement : MonoBehaviour
 
     AudioSource jumpSound;
     AudioSource coinSound;
-
 
     //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -59,21 +56,10 @@ public class playerMovement : MonoBehaviour
             jumpRequested = true;
 
             //Jumper logic defined in Update() so jump can happen any frame inside GameObject
-            if (insideJumper && jumpCount == 0 && !speedBoost)
+            if (insideJumper && jumpCount == 0)
             {
 
                 rb.AddForce(Vector2.up * (jumpForce + 5), ForceMode2D.Impulse);
-                jumpSound.Play();
-                jumpCount = 1; //Set jumpCount to 1
-                jumpRequested = false; //Disallow jump after pressed
-
-            }
-
-            if (insideJumper && jumpCount == 0 && speedBoost)
-            {
-
-                //Increase jump height for jumper when Player's speed has increased
-                rb.AddForce(Vector2.up * (jumpForce + 20), ForceMode2D.Impulse);
                 jumpSound.Play();
                 jumpCount = 1; //Set jumpCount to 1
                 jumpRequested = false; //Disallow jump after pressed
@@ -131,52 +117,41 @@ public class playerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        //Speed changers (spped set in gameObject)
+        //Speed changers (speed set in gameObject)
 
+        //speedBoost
         if (collision.gameObject.CompareTag("speedBoost"))
         {
 
             //Increase speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed += speedIncrease;
-            speedBoost = true;
 
         }
 
-        if (!collision.gameObject.CompareTag("speedBoost"))
-        {
-
-            speedBoost = false;
-
-        }
-
+        //speedDecrease
         if (collision.gameObject.CompareTag("speedDecrease"))
         {
 
             //Decrease speed specified amount upon collision with speedIncrease isTrigger GameObject
             speed -= speedDecrease;
-            /*speedSlower = true;*/
 
         }
 
-        /*if (!collision.gameObject.CompareTag("speedDecrease"))
-        {
-
-            speedSlower = false;
-
-        }*/
-
+        //Coin
         if (collision.gameObject.CompareTag("Coin"))
         {
 
+            //Play coin sound upon isTrigger collision
             coinSound.Play();
-            Destroy(collision.gameObject);
+            Destroy(collision.gameObject); //Destroy GameObject upon isTrigger collision
 
         }
 
+        //Jumper
         if (collision.gameObject.CompareTag("Jumper"))
         {
 
-            //Set insideJumper to true when active. This is linked to code in Update()
+            //Set insideJumper to true when active, allowing for jump
             insideJumper = true;
 
         }
@@ -192,7 +167,8 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Bouncer") && !isGrounded) {
 
             //When the Player interacts with this, they will launch up
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            //Launch is decreased since Player jump and bouncer boost may stack together
+            rb.AddForce(Vector2.up * (jumpForce + 2), ForceMode2D.Impulse);
 
         }
 
@@ -205,6 +181,7 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.layer == 8)
         {
 
+            //Set isGrounded to false when exiting ground, disallowing a jump
             isGrounded = false;
             Debug.Log("Grounded is false");
 
@@ -218,7 +195,7 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Jumper"))
         {
 
-            //After Player has left Jumper, reset everything
+            //After Player has left Jumper GameObject, reset everything
             insideJumper = false;
             jumpCount = 0;
 

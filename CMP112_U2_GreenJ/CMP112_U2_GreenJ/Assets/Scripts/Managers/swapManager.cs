@@ -13,13 +13,13 @@ public class swapManager : MonoBehaviour
     public void swapToShip(Vector3 spawnPosition)
     {
 
-        //Turn Player off
+        //Deactivate Player GameObject
         Player.SetActive(false);
 
-        //Replace the Player with the Ship at the Player's last position
+        //Move the Ship to where the Player last was
         Ship.transform.position = spawnPosition;
 
-        //Make ship visible
+        //Make ship active - the user controls the Ship upon activation
         Ship.SetActive(true);
 
         //Change camera target to Ship
@@ -36,16 +36,16 @@ public class swapManager : MonoBehaviour
         //Call in PlayerMovement script so Player can move
         var playerMove = Player.GetComponent<playerMovement>();
 
-        //Reset Player to be grounded
+        //Reset Player to initially be grounded (so Player isn't stuck to the ground)
         playerMove.setIsGrounded(true);
 
-        //Turn Ship off
+        //Deactivate Ship GameObject
         Ship.SetActive(false);
 
-        //Replace the Ship with the Player at the Ship last position
+        //Move the Player to where the Ship last was
         Player.transform.position = spawnPosition;
 
-        //Make Player visible
+        //Make Player active - the user controls the Player upon activation
         Player.SetActive(true);
 
         //Change camera target to Player

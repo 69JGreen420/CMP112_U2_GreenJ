@@ -7,14 +7,14 @@ public class floorMoveRight : MonoBehaviour
     public float speed;
 
     private float startPosition;
-    private bool movingLeft = false;
     private bool movingRight = true;
+    private bool movingLeft = false;
 
     //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
 
-        //Set initial startPosition to be same as GameObject position
+        //Record GameObject's initial y position and store it as centre point
         startPosition = transform.position.x;
 
     }
@@ -23,37 +23,40 @@ public class floorMoveRight : MonoBehaviour
     void Update()
     {
 
-        if (movingLeft)
-        {
-
-            //Move object to the left
-            transform.position += Vector3.left * speed * Time.deltaTime;
-
-            if (transform.position.x <= startPosition - distance)
-            {
-
-                movingLeft = false;
-                movingRight = true;
-
-            }
-
-
-        }
-
         if (movingRight)
         {
 
+            //Move object to the right at set speed
             transform.position += Vector3.right * speed * Time.deltaTime;
 
+            //If the object has reached its max distance it can travel to the right
             if (transform.position.x >= startPosition + distance)
             {
 
-                movingRight = false;
-                movingLeft = true;
+                movingRight = false; //Set movingRight to false (can't move any further right)
+                movingLeft = true; //Set movingLeft to true (allowing object to now move left)
+
+            }
+
+        }
+
+        if (movingLeft)
+        {
+
+            //Move object to the left at set speed
+            transform.position += Vector3.left * speed * Time.deltaTime;
+
+            //If the object has reached its max distance it can travel to the right
+            if (transform.position.x <= startPosition - distance)
+            {
+
+                movingLeft = false; //Set movingLeft to false (can't move any further left)
+                movingRight = true; //Set movingRight to true (allowing object to now move right)
 
             }
 
         }
 
     }
+
 }
