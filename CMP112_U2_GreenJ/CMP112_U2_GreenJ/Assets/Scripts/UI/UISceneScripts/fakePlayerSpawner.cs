@@ -9,10 +9,13 @@ public class fakePlayerSpawner : MonoBehaviour
     void Start()
     {
 
+        //Set timeScale to 1 to ensure scene doesn't pause upon load
+        Time.timeScale = 1f;
+
         //Set random value from -5 to 5
         float randomX = Random.Range(-5f, 5f);
         //Set spawnPosition to randomnX value (x coord) along 3 in y coord
-        Vector3 spawnPosition = new Vector3(randomX, 3f, 0f);
+        Vector3 spawnPosition = new Vector3(randomX, 2f, 0f);
 
         //Spawn fakePlayer GameObject at runtime (Quaternion.identity used to keep orientation neutral
         Instantiate(fakePlayer, spawnPosition, Quaternion.identity);
