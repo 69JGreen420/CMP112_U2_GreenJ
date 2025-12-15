@@ -7491,7 +7491,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 935789361}
         m_TargetAssemblyTypeName: levelManager, Assembly-CSharp
         m_MethodName: loadNextLevel
         m_Mode: 1
