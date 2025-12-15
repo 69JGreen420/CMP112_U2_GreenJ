@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 318828741972565178}
   - component: {fileID: 6825219698130246669}
   - component: {fileID: 335598971808486687}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: rightBarrier
   m_TagString: deathBarrier
   m_Icon: {fileID: 0}
