@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|c:\\cmp112_u2_greenj\\cmp112_u2_greenj\\cmp112_u2_greenj\\assets\\scripts\\managers\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\managers\\levelmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|c:\\cmp112_u2_greenj\\cmp112_u2_greenj\\cmp112_u2_greenj\\assets\\scripts\\ui\\uiscenescripts\\fakeplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\uiscenescripts\\fakeplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|c:\\cmp112_u2_greenj\\cmp112_u2_greenj\\cmp112_u2_greenj\\assets\\scripts\\movement\\freeroamplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF5E5B83-3A37-E584-F8B3-694444858F29}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\movement\\freeroamplayermovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "levelManager.cs",
+              "DocumentMoniker": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\Managers\\levelManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Managers\\levelManager.cs",
+              "ToolTip": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\Managers\\levelManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Managers\\levelManager.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:45:28.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fakePlayerMovement.cs",
+              "DocumentMoniker": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\UI\\UISceneScripts\\fakePlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\UISceneScripts\\fakePlayerMovement.cs",
+              "ToolTip": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\UI\\UISceneScripts\\fakePlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\UISceneScripts\\fakePlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:35:39.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "freeRoamPlayerMovement.cs",
+              "DocumentMoniker": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\Movement\\freeRoamPlayerMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Movement\\freeRoamPlayerMovement.cs",
+              "ToolTip": "C:\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\CMP112_U2_GreenJ\\Assets\\Scripts\\Movement\\freeRoamPlayerMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Movement\\freeRoamPlayerMovement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-16T14:33:53.31Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

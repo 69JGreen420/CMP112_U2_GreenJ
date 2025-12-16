@@ -29,6 +29,13 @@ public class levelManager : MonoBehaviour
 
     }
 
+    public void LoadBonusLevel()
+    {
+
+        SceneManager.LoadScene("bonusLevel");
+
+    }
+
     public void loadNextLevel()
     {
 

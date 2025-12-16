@@ -2,7 +2,7 @@ using UnityEngine;
 using Unity.VisualScripting;
 using UnityEngine.InputSystem;
 
-public class fakePlayerMovements : MonoBehaviour
+public class fakePlayerMovement : MonoBehaviour
 {
     private bool isGrounded = false;
     private bool jumpRequested = false;
@@ -10,14 +10,13 @@ public class fakePlayerMovements : MonoBehaviour
     private int jumpCount;
     private Rigidbody2D rb;
 
-    //Set direction to always be going right
+    //Set direction to initially be going right
     private float direction = 1;
 
     public float speed;
     public float jumpForce;
 
     AudioSource jumpSound;
-    AudioSource coinSound;
 
     //Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -101,6 +100,25 @@ public class fakePlayerMovements : MonoBehaviour
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
             
+        }
+
+        //(Failed) attempt at fixing inaccurate isGrounded issue
+
+        //When fakePlayer touches a Wall layer, while also touching the ground layer,
+        //isGrounded stays as false, even when they have left the wall layer and moved back
+        //to the ground layer. fakePlayer remains in a false isGrounded state until they
+        //reach another wall
+        if (collision.gameObject.layer == 8 && collision.gameObject.layer == 6)
+        {
+
+            isGrounded = true;
+            Debug.Log("Grounded is true");
+
+            //Set jumpCount to 0
+            jumpCount = 0;
+
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0f);
+
         }
 
     }
