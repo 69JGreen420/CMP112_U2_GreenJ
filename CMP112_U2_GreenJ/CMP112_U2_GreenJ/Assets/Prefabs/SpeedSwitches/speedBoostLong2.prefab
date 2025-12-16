@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7801133677103150513}
   - component: {fileID: 738267004548424551}
   - component: {fileID: 3367354836072659834}
+  - component: {fileID: 9124294526553738097}
   m_Layer: 8
   m_Name: speedBoostLong2
   m_TagString: speedBoost
@@ -162,3 +163,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9124294526553738097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008639904740934308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82599f692a9ce4f139d056c42cb10440, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

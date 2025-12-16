@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: leftBarrier
       objectReference: {fileID: 0}
+    - target: {fileID: 1026817269230250308, guid: 459a559c4cc374b6ba25ca358a445b8b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 2201376366326068311, guid: 459a559c4cc374b6ba25ca358a445b8b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -70,7 +74,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2286169914229777000, guid: 459a559c4cc374b6ba25ca358a445b8b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 2286169914229777000, guid: 459a559c4cc374b6ba25ca358a445b8b, type: 3}
       propertyPath: m_LocalPosition.x
